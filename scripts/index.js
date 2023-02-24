@@ -1,5 +1,5 @@
 let ataqueJugador;
-let ataqueAleatorioRival;
+let ataqueRival;
 let vidasJugador = "❤️".repeat(3);
 let vidasRival = "❤️".repeat(3);
 
@@ -14,9 +14,9 @@ let btnReiniciar = llamado("reiniciar");
 btnReiniciar.addEventListener("click", reiniciar);
 
 const mascotas = {
-  Hipodoge: "https://github.com/platzi/curso-programacion-basica/blob/35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_hipodoge_attack.png?raw=true",
-  Capipepo: "https://github.com/platzi/curso-programacion-basica/blob/35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png?raw=true",
-  Ratigueya: "https://github.com/platzi/curso-programacion-basica/blob/35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_ratigueya_attack.png?raw=true"
+  Hipodoge: "/assets/hipodoge.png",
+  Capipepo: "/assets/capipepo.png",
+  Ratigueya: "/assets/ratigueya.png"
 };
 const fondos = {
   Hipodoge:'#0267c1',
@@ -85,33 +85,33 @@ function SeleccionEnemigo() {
 //paso 4: Se lanza el poder del jugador
 function ataqueFuego() {
   ataqueJugador = "🔥";
-  ataqueRival();
+  ataqueAleatorioRival();
 }
 function ataqueAgua() {
   ataqueJugador = "💧";
-  ataqueRival();
+  ataqueAleatorioRival();
 }
 function ataqueTierra() {
   ataqueJugador = "🌱";
-  ataqueRival();
+  ataqueAleatorioRival();
 }
 
 //Paso 4: Se lanza el poder del rival
-function ataqueRival() {
+function ataqueAleatorioRival() {
   const ataques = ["🔥", "💧", "🌱"];
-  ataqueAleatorioRival = ataques[aleatorio(0, 2)];
+  ataqueRival = ataques[aleatorio(0, 2)];
 
   combate();
 }
 
 //Paso 5: Se determina si se gana o se pierde
 function combate() {
-  if (ataqueJugador == ataqueAleatorioRival) {
+  if (ataqueJugador == ataqueRival) {
     crearMensaje("Empate");
   } else if (
-    (ataqueJugador == "🔥" && ataqueAleatorioRival == "🌱") ||
-    (ataqueJugador == "💧" && ataqueAleatorioRival == "🔥") ||
-    (ataqueJugador == "🌱" && ataqueAleatorioRival == "💧")
+    (ataqueJugador == "🔥" && ataqueRival == "🌱") ||
+    (ataqueJugador == "💧" && ataqueRival == "🔥") ||
+    (ataqueJugador == "🌱" && ataqueRival == "💧")
   ) {
     crearMensaje("Ganaste");
     vidasRival = vidasRival.slice(0, -2);
@@ -138,8 +138,8 @@ function crearMensaje(resultado) {
 
   llamado('resultado').innerHTML =resultado
   llamado('ataque-jugador').innerHTML = ataqueJugador
-  llamado('ataque-rival').innerHTML = ataqueAleatorioRival 
-  llamado('resultado').setAttribute("class", "activado")
+  llamado('ataque-rival').innerHTML = ataqueRival 
+  llamado('resultado').setAttribute("class", "consecuencia")
 
 }
 
