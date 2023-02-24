@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="interfas">
+      <h1 class="titulo" id="titulo">MOKEPON</h1>
+
+      <section id="seleccion-mascota">
+        <h2 class="subtitulo">Elige tu mascota</h2>
+
+        <div class="tarjetas">
+          <label for="hipodoge" class="tarjeta-mokepon" tabindex="0">
+            <img
+              src="https://github.com/platzi/curso-programacion-basica/blob/35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_hipodoge_attack.png?raw=true"
+              alt=""
+            />
+            <p>Hipodoge</p>
+          </label>
+          <input type="radio" name="mascota" id="hipodoge" />
+
+          <label for="capipepo" class="tarjeta-mokepon" tabindex="0">
+            <img
+              src="https://github.com/platzi/curso-programacion-basica/blob/35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_capipepo_attack.png?raw=true"
+              alt=""
+            />
+            <p>Capipepo</p>
+          </label>
+          <input type="radio" name="mascota" id="capipepo" />
+
+          <label for="ratigueya" class="tarjeta-mokepon" tabindex="0">
+            <img
+              src="https://github.com/platzi/curso-programacion-basica/blob/35-assets-mokepones/programar/mokepon/assets/mokepons_mokepon_ratigueya_attack.png?raw=true"
+              alt=""
+            />
+            <p>Ratigueya</p>
+          </label>
+          <input type="radio" name="mascota" id="ratigueya" />
+        </div>
+
+        <button id="btnMascota">Seleccionar</button>
+      </section>
+
+      <section id="seleccion-ataque">
+        <div id="mensajes">
+          <p id="resultado" class="subtitulo">Elige tu ataque</p>
+        </div>
+
+        <div class="personajes">
+          <div id="jugador">
+            <p id="vidas-jugador">❤️❤️❤️</p>
+            <img id="imgJugador" src="" alt="" />
+            <p id="mascota-jugador"></p>
+          </div>
+
+          <p id="ataque-jugador"></p>
+          <p id="ataque-rival"></p>
+
+          <div id="rival">
+            <p id="vidas-rival">❤️❤️❤️</p>
+            <img id="imgRival" class="mascot" src="" alt="" />
+            <p id="mascota-rival"></p>
+          </div>
+        </div>
+
+        <div>
+          <button id="btnFuego" class="btn">Fuego 🔥</button>
+          <button id="btnAgua" class="btn">Agua 💧</button>
+          <button id="btnTierra" class="btn">Tierra 🌱</button>
+        </div>
+
+        <div id="reiniciar">
+          <button id="btnReiniciar">Jugar de nuevo</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
