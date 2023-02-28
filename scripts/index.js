@@ -14,10 +14,11 @@ let btnReiniciar = llamado("reiniciar");
 btnReiniciar.addEventListener("click", reiniciar);
 
 const mascotas = {
-  Hipodoge: "/assets/hipodoge.png",
-  Capipepo: "/assets/capipepo.png",
-  Ratigueya: "/assets/ratigueya.png"
+  Hipodoge: "../assets/hipodoge.png",
+  Capipepo: "../assets/capipepo.png",
+  Ratigueya: "../assets/ratigueya.png"
 };
+
 const fondos = {
   Hipodoge:'#0267c1',
   Capipepo:'#06a736',
