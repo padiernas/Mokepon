@@ -13,7 +13,7 @@
 }
 
 body {
-    background: url(/assets/fondo.jpg);
+    background: url(/assets/fondo.png);
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -80,7 +80,7 @@ body {
     align-items: center;
     flex-direction: column;
 
-    background: #D7FFAB;
+    background: #f0f0f0;
 
     border-radius: 1rem;
     border: 0.5px solid #5a4e4b;
